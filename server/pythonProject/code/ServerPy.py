@@ -2,11 +2,8 @@ from flask import Flask, jsonify, request
 from ultralytics import YOLO
 import cv2
 import numpy as np
-import os
 
 app = Flask(__name__)
-
-# Load YOLO model
 model = YOLO('E:\\School\\PBL\\PBL6\\model\\Server\\server\\pythonProject\\model\\weights\\v4.pt')
 
 
