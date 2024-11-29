@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, jsonify, request
 from ultralytics import YOLO
 import cv2
@@ -7,7 +9,8 @@ import traceback
 
 app = Flask(__name__)
 
-model_path = 'E:\\School\\PBL\\PBL6\\model\\Server\\server\\pythonProject\\model\\weights\\v4.pt'
+model_path = 'server/pythonProject/code/v4.pt'
+
 try:
     model = YOLO(model_path)
     print(f"Model loaded successfully from {model_path}")
